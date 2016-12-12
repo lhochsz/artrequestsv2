@@ -1,12 +1,12 @@
 
-<span ng-include="'../views/users/auth.html'"></span>
+<h1>Login</h1> 
 <span ng-controller="signIn">
     <form ng-submit="signIn(user)" class="signin form-horizontal" name="signInForm">
         <div class="control-group">
-            <label for="email" class="control-label">Email</label>
+            <label for="username" class="control-label">Username</label>
 
             <div class="controls">
-                <input id="email" type="text" name="email" placeholder="Email" ng-model="user.email" required>
+                <input id="username" type="text" name="username" placeholder="Username" ng-model="user.username" required>
             </div>
         </div>
         <div class="control-group">
@@ -17,8 +17,8 @@
             </div>
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Sign in&nbsp;</button>
-            or&nbsp;<a ui-sref="SignUp" class="show-signup">Sign up</a>
+            <button type="submit" class="btn btn-primary">Login&nbsp;</button>
+            or&nbsp;<a ui-sref="SignUp" class="show-signup">Sign Up</a>
         </div>
     </form>
 </span>
