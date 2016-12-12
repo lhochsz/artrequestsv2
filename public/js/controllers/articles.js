@@ -1,6 +1,18 @@
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', 'Global', 'Articles', '$state', function ($scope, $stateParams, Global, Articles, $state) {
     $scope.global = Global;
 
+    $scope.isLoggedIn = function() {
+
+      $http.get('/checklogin')
+        .success(function(data) {
+          console.log(data);
+          $rootScope.loggedIn = data;
+        })
+        .error(function(data) {
+          console.log('error: ' + data);
+        });
+    };
+
     $scope.create = function() {
         var article = new Articles({
             title: this.title,
