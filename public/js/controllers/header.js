@@ -7,6 +7,9 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     }, {
         "title": "Create New Art Request",
         "state": "createArticle"
+    }, {
+        "title": "Archive",
+        "state": "archive"
     }];
     
     $scope.isCollapsed = false;

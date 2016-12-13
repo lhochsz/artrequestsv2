@@ -40,6 +40,11 @@ angular.module('mean').config(['$stateProvider','$urlRouterProvider', function($
             controller : 'ArticlesController',
             templateUrl: 'views/articles/view.html'
         })
+        .state('archive',{
+            url : '/archive',
+            controller : 'ArticlesController',
+            templateUrl: 'views/articles/archive.ejs'
+        })
         .state('404',{
             templateUrl: 'views/404.html'
         })

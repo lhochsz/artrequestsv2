@@ -8,6 +8,7 @@
 				</input>
 			</div>
 		</div>
+
 		<div class="control-group">
 			<label class="control-label" for="content">Notes</label>
 
@@ -16,6 +17,19 @@
 				</textarea>
 			</div>
 		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="status">Status</label>
+				<select data-ng-model="article.status" id="status" type="text" required>
+						<option value="" hidden />
+						<option disabled selected value=""> --Choose a Status-- </option>
+						<option value="Artist Preparation">Artist Preparation</option>
+						<option value="Customer Approval">Customer Approval</option>
+						<option value="Regulatory Approval">Regulatory Approval</option>
+						<option value="Finalized">Finalized</option>
+				</select>
+		</div>
+
 		<div class="control-group">
 			<div class="controls">
 				<input type="submit" class="btn">

@@ -2,8 +2,9 @@
 <input type="text" class="form-control" ng-model="search" placeholder="Search for an art request">
 
 <section data-ng-init="find()">
-	<ul class="articles unstyled">
-		<li class="request-list" data-ng-show="global.user.id == article.User.id && article.status != 'Finalized'" data-ng-repeat="article in articles | filter:search | orderBy: -createdAt " data-ng-show="global.authenticated">
+	<h1>Archive</h1>
+	<ul class="old unstyled">
+		<li class="request-list" data-ng-show="global.user.id == article.User.id && article.status == 'Finalized'" data-ng-repeat="article in articles | filter:search | orderBy: -createdAt " data-ng-show="global.authenticated">
 			<span>Created: {{article.createdAt | date:'medium'}}</span> / <span>{{article.User.name}}</span>
 			<span>Updated: {{article.updatedAt | date:'medium'}}</span>
 			<h2><a ui-sref="viewArticle({articleId : article.id})">{{article.title}}</a></h2>
