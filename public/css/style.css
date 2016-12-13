@@ -1,6 +1,6 @@
 .navbar .nav>li>a.brand {
     padding-left:20px;
-    margin-left:0
+    margin-left:0;
 }
 
 .content {
@@ -10,6 +10,10 @@
 
 .request-list {
     margin-bottom: 2rem;
+}
+
+a {
+    color: #F7931E;
 }
 
 footer {

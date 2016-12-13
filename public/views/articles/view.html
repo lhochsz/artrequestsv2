@@ -3,7 +3,7 @@
     <span>{{article.User.name}}</span>
     <h2>{{article.title}}</h2>
     <div data-ng-show="global.user.id == article.User.id">
-        <a class="btn" ui-sref="editArticles({articleId : article.id})">Edit</a>
+        <a data-ng-show="global.user.id == article.User.id && article.status != 'Finalized'" class="btn" ui-sref="editArticles({articleId : article.id})">Edit</a>
         <a class="btn" data-ng-click="remove();">Delete</a>
     </div>
     <div>Notes: {{article.content}}</div>
