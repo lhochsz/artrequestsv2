@@ -8,4 +8,21 @@
     </div>
     <div>Notes: {{article.content}}</div>
     <div>Status: {{article.status}}</div>
+    
+    <div data-ng-if="article.status == 'Artist Preparation'">
+		<img src="./img/images/red.png" alt="Artist Preparation"/>
+	</div>
+
+	<div data-ng-if="article.status == 'Customer Approval'">
+		<img src="./img/images/orange.png" alt="Customer Approval"/>
+		<button>View File</button>
+	</div>
+	<div data-ng-if="article.status == 'Regulatory Approval'">
+		<img src="./img/images/yellow.png" alt="Regulatory Approval"/>
+	</div>
+	<div data-ng-if="article.status == 'Finalized'">
+			<img src="./img/images/green.png" alt="Finalized"/>
+			<button>View Final Design</button>
+	</div>
+
 </section>

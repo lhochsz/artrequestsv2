@@ -6,22 +6,28 @@
 
 var crypto = require('crypto');
 
+   // load up the user model
+var Sequelize = require('sequelize');
+require('sequelize-isunique-validator')(Sequelize);
+
 module.exports = function(sequelize, DataTypes) {
 
 	var User = sequelize.define('User', 
 		{
 			name: DataTypes.STRING,
-			email: DataTypes.STRING,
+			email: { 
+				type: DataTypes.STRING, 
+				allowNull: false,
+        		isUnique: true,
+        		validate: {
+            		isEmail: true,
+            		isUnique: sequelize.validateIsUnique('email')
+            	}
+			},
 			username: DataTypes.STRING,
 			hashedPassword: DataTypes.STRING,
 			provider: DataTypes.STRING,
-			salt: DataTypes.STRING, 
-			facebookUserId: DataTypes.INTEGER,
-			twitterUserId: DataTypes.INTEGER,
-			twitterKey: DataTypes.STRING,
-			twitterSecret: DataTypes.STRING,
-			github: DataTypes.STRING,
-			openId: DataTypes.STRING
+			salt: DataTypes.STRING
 		},
 		{
 			instanceMethods: {

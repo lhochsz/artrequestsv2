@@ -6,6 +6,9 @@
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+
+ "use strict"
+ 
 try {
     window.FB || (function (window, fb_fif_window) {
         var apply = Function.prototype.apply;

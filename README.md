@@ -1,27 +1,8 @@
-MEAN Stack Relational ![Mean Stack Build Status](https://travis-ci.org/jpotts18/mean-stack-relational.png)
-=====================
-The main idea for this repository is shamelessly stolen from [http://mean.io](http://mean.io). It says:
-
-> MEAN is a boilerplate that provides a nice starting point for [MySQL], Express, Node.js, and AngularJS based applications. It is designed to give you quick and organized way to start developing of MEAN based web apps with useful modules like sequelize and passport pre-bundled and configured. We mainly try to take care of the connection points between existing popular frameworks and solve common integration problems.
-
-
-The MongoDB ORM, [Mongoose](http://mongoosejs.com/), has been replaced with [Sequelize](http://sequelizejs.com/). Switching from mongoose to sequelize allows developers easy access to MySQL, MariaDB, SQLite or PostgreSQL databases by mapping database entries to objects and vice versa.
-
-[Addy Osmani's Blog](http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman/) explains SQL databases, being strongly typed in nature are great at enforcing a level of consistency, ensuring many kinds of bad data simply don’t get recorded. By using SQL databases MEAN Stack Relational favors reliability over the performance gains of NoSQL databases.
-
-# Demo
-
-Deploy to your Heroku account for a demo:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-Note: Deploy from main repository view to avoid missing app.json error.
 
 # Getting Started
 
-Alright now the fun begins. First clone or download the repo to your computer. 
+First clone or download the repo to your computer. 
 
-1. Clone the repository ```git clone git@github.com:jpotts18/mean-stack-relational.git```.
 1. Go into the repository ```cd mean-stack-relational/```.
 1. Install dependencies with NPM ```npm install```. This will copy development.json5, and production.json5 from respective sample files in the config/env folder and run the grunt copy task to copy frontend lib files to their destination.
 1. Plug in your private and public keys for working with FB and Twitter into ```/config/env/development.json5``` and/or ```/config/env/production.json5```.
@@ -30,7 +11,7 @@ Alright now the fun begins. First clone or download the repo to your computer.
 1. Run in development mode with grunt: ```grunt```
 1. Make something awesome!
 
-Thats all! Now go and open up your browser at [http://localhost:3000](http://localhost:3000), and tweet [@jpotts18](http://twitter.com/jpotts18) to say thanks!
+Thats all! Now go and open up your browser at [http://localhost:3002](http://localhost:3002).
 
 
 ## Prerequisites
@@ -81,6 +62,6 @@ Following is a list of items detailing future direction for MEAN Stack Relationa
 - Yeoman generator to compete with MEAN
 
 
-# Troubleshooting and Contact
+# Thanks!
 
-During install some of you may encounter some issues feel free to contact me (jpotts18) or the co-contributor (chaudhryjunaid), via the repository issue tracker or the links provided below. I am also available on twitter at [@jpotts18](http://twitter.com/jpotts18) and Junaid at [@chjunaidanwar](http://twitter.com/chjunaidanwar).
+Thank you to [John Potts](https://github.com/jpotts18) and [Chaudhry Junaid Anwar](https://github.com/chaudhryjunaid) for their [MEAN Stack Relational](https://github.com/jpotts18/mean-stack-relational) starter app.
